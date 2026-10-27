@@ -6,22 +6,26 @@ An interactive dashboard that ranks 34 European countries on labour precarity, c
 
 ### 🔗 [Open the live dashboard](https://precarity-peek.lovable.app/)
 
+![Overview: the hidden psychological cost of unstable work](images/overview.png)
+
 ## The question
 
 Employment rates alone can make a labour market look healthy. This project asks a different question: **in which countries does having a job still leave people financially insecure, unstable or overworked?**
 
 ## The Precarity Index
 
-Each country gets a risk score from 0 to 100, built from four dimensions. Each indicator is normalised to a 0–100 scale across all countries before weighting.
+Each country gets a risk score from 0 to 100, built from four dimensions.
 
-| Dimension | Indicator (Eurostat) | Weight |
+| Dimension | Indicator | Weight |
 |---|---|---|
 | **Financial stress** | In-work at-risk-of-poverty rate | 30% |
 | **Job insecurity** | Share of employees with short job tenure | 20% |
 | **Pay inequality** | Gender pay gap (unadjusted) | 30% |
-| **Overwork risk** | Mean weekly hours worked per employee | 20% |
+| **Overwork risk** | Mean weekly hours worked per employee (ILO) | 20% |
 
-Scores are grouped into four risk bands: **Severe** (65+), **High** (55–64), **Moderate** (40–54) and **Low** (below 40). A fifth dataset, employment rate by sex, is used for gender comparisons and the employment-versus-precarity scatter plot.
+![How the Precarity Index is built](images/methodology.png)
+
+Scores are grouped into four risk bands: **Severe** (65+), **High** (55–64), **Moderate** (40–54) and **Low** (below 40). Each indicator is normalised to 0–100 with min–max scaling (0 = best value among the countries, 100 = worst) before weighting. A fifth dataset, employment rate by sex, is used for gender comparisons and the employment-versus-precarity scatter plot.
 
 ## What the dashboard shows
 
@@ -31,11 +35,15 @@ Scores are grouped into four risk bands: **Severe** (65+), **High** (55–64), *
 - **Rankings:** all 34 countries ranked by risk score, with export
 - **Methodology:** the formula, weights, normalisation and data sources
 
+![The four dimensions of precarity](images/four_dimensions.png)
+
+![Risk map of Europe in the Explorer](images/explorer_map.png)
+
 **Key insight:** high employment does not guarantee secure work. Some countries combine strong employment rates with high precarity because of pay inequality and job instability.
 
 ## Data
 
-Five datasets provided by the hackathon, sourced from Eurostat (including EU-SILC): employed persons by job tenure, employment rate by sex, the unadjusted gender pay gap, the in-work at-risk-of-poverty rate by sex, and mean weekly hours usually worked by sex. The processed country-level data is in [`public/precarity_index.json`](public/precarity_index.json).
+Five datasets provided by the hackathon. From Eurostat (including EU-SILC): employed persons by job tenure, employment rate by sex, the unadjusted gender pay gap, and the in-work at-risk-of-poverty rate by sex. From the ILO (ILOSTAT): mean weekly hours usually worked per employee by sex. The processed country-level data is in [`public/precarity_index.json`](public/precarity_index.json).
 
 ## Limitations
 
