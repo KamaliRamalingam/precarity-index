@@ -2,7 +2,7 @@
 
 An interactive dashboard that ranks 34 European countries on labour precarity, combining in-work poverty, short job tenure, the gender pay gap and working hours into one risk score.
 
-**Solo build · Build for Impact: Labor Rights Data Hackathon (Data & AI Stockholm × Lovable) · May 2026**
+**Build for Impact: Labor Rights Data Hackathon (Data & AI Stockholm × Lovable) · May 2026 · Solo**
 
 ### 🔗 [Open the live dashboard](https://precarity-peek.lovable.app/)
 
